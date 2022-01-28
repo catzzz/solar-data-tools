@@ -24,20 +24,9 @@ RUN pip install Mosek
 RUN pip install statistical-clear-sky
 RUN pip install pv-system-profiler
 RUN pip install awscli coverage
-WORKDIR /root/mosek
-COPY ./mosek.lic ./
+# copy mosek licence
+COPY ./mosek.lic /root/mosek/
 WORKDIR /usr/local/src/solar-data-tools
 COPY ./ ./
-# copy mosek licence
-
-
-
-
-
-# I suggest using the MOSEK convex solver with cvxpy, if possible. For additional information about setting up MOSEK,
-# see here: https://docs.mosek.com/8.1/pythonapi/install-interface.html. A license is required to use this software.
-# Academic license info: https://www.mosek.com/products/academic-licenses/
-# Trial commercial license info: https://www.mosek.com/products/trial/
-
-# statistical-clear-sky
-# pv-system-profiler
+# run juypter
+CMD ["jupyter", "notebook", "--port=8888", "--no-browser", "--ip=0.0.0.0", "--allow-root"]
