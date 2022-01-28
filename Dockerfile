@@ -11,7 +11,7 @@ COPY ./requirements.txt ./requirements.txt
 # install python pacakges
 RUN pip install -r requirements.txt
 
-# copy coverage
+# install coverage
 RUN pip install awscli coverage
 
 # # copy mosek licence
