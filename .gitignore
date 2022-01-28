@@ -17,6 +17,10 @@
 *.xml
 notebooks/data/*
 
+### Licence ###
+*.lic
+
+
 ### Database ###
 *.accdb
 *.db
