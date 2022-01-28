@@ -91,7 +91,7 @@ See [notebooks](/notebooks) folder for examples.
 
 ## Install & Setup
 
-### 3 ways of setting up, either approach works:
+### 4 ways of setting up, either approach works:
 
 #### 1) Recommended: Set up `conda` environment with provided `.yml` file
 
@@ -143,6 +143,21 @@ $ pip install -e path/to/root/folder
 ```sh
 $ conda install -c slacgismo solar-data-tools
 ```
+
+#### 4) Docker
+
+To run Juypter from a docker contaier, the docker daemon must be installed and run in your system. Please see https://www.docker.com/get-started for details. If the docker daemon is running in your system, please follow the below steps.
+
+1). Build and run docker-compose image.
+
+~~~
+host% docker-compose up --build
+~~~
+
+3). Copy the generated token in your terminal:
+`juypter_1  | [x xx:xx:xx.xxx NotebookApp]  or http://127.0.0.1:8888/?token=[generated-token]`
+
+4). Open the browser `localhost:8888`, and Paste the token to the login field.
 
 ### Solvers
 
