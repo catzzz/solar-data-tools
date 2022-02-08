@@ -8,6 +8,7 @@ services:
       - "8888:8888"
     volumes:
       - .:/usr/local/src/solar-data-tools
+    command: ["jupyter", "notebook", "--port=8888", "--no-browser", "--ip=0.0.0.0", "--allow-root"]
   test:
     build:
       context: .
