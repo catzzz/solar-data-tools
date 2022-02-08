@@ -157,7 +157,7 @@ host% docker-compose up --build
 3). Copy the generated token in your terminal:
 `juypter_1  | [x xx:xx:xx.xxx NotebookApp]  or http://127.0.0.1:8888/?token=[generated-token]`
 
-4). Open the browser `localhost:8888`, and Paste the token to the login field.
+4). Open the browser `127.0.0.1:8888`, and Paste the token to the login field.
 
 ### Solvers
 
