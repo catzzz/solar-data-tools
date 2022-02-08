@@ -155,9 +155,15 @@ host% docker-compose up --build
 ~~~
 
 3). Copy the generated token in your terminal:
-`juypter_1  | [x xx:xx:xx.xxx NotebookApp]  or http://127.0.0.1:8888/?token=[generated-token]`
+`jupyter_1  | [x xx:xx:xx.xxx NotebookApp]  or http://127.0.0.1:8888/?token=[generated-token]`
 
-4). Open the browser `127.0.0.1:8888`, and Paste the token to the login field.
+4). Open the browser `127.0.0.1:8888`, and Paste the token to the login field. Jupyter in docker uses local 'solardatatools' packages. Please add path before import any from from 'solardatatools` packages.
+
+~~~
+import sys
+sys.path.append("../")
+from solardatatools import DataHandler, get_pvdaq_data
+~~~
 
 ### Solvers
 
