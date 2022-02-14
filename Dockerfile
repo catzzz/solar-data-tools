@@ -6,6 +6,8 @@ RUN pip install --upgrade pip
 
 # copy installation requirement
 
+
+
 # install python pacakges
 # RUN pip install -r requirements.txt # statistical-clear-sky inclde solar-data-tools packalges
 RUN pip install scipy
@@ -18,6 +20,8 @@ RUN pip install seaborn
 RUN pip install requests
 RUN pip install pvlib
 RUN pip install cvxpy>=1.1.0
+RUN pip install boto3
+RUN pip install python-dotenv
 # I suggest using the MOSEK convex solver with cvxpy, if possible. For additional information about setting up MOSEK,
 # see here: https://docs.mosek.com/8.1/pythonapi/install-interface.html. A license is required to use this software.
 # Academic license info: https://www.mosek.com/products/academic-licenses/
@@ -25,6 +29,7 @@ RUN pip install cvxpy>=1.1.0
 RUN pip install Mosek
 # install coverage
 RUN pip install awscli coverage
+
 
 # # copy mosek licence
 COPY ./licence/mosek.lic /root/mosek/
